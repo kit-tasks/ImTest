@@ -1,0 +1,5 @@
+﻿pathOfDirectory C:\Users\Максим\source\repos\ImTest\ImTest\data\
+BackgroundColor Yellow
+ForegroundColor Blue
+CursorVisible true
+Title ImTest

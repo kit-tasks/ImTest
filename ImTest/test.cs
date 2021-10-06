@@ -20,12 +20,13 @@ namespace ImTest
             {
                 foreach (int id in nums)
                 {
-                string[] forDict = file[id].Split();
+                string[] forDict = file[id].Split("_");
                 words_rus_eng.Add(forDict[0], forDict[1]);
                 }
             } catch (Exception) {
                 Console.WriteLine("[EROR] выбранный файл не содержит лекскиу, или не правильного формата");
-                Console.WriteLine("Файл с лекский ввида [русское слово][пробел][английское слово]");
+                Console.WriteLine("Файл с лекский ввида [русское слово]_[английское слово]");
+                Console.WriteLine("Пример: читать_read");
                 startTest.reInit();
             }
 

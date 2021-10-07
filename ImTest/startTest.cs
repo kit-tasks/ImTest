@@ -7,9 +7,9 @@ using System.IO;
 
 namespace ImTest
 {
-    class startTest
+    class StartTest
     {
-        static Dictionary<string, string> openConfig(Dictionary<string, string> config) // доступ тип_вывода название (переменные)
+        static Dictionary<string, string> OpenConfig(Dictionary<string, string> config) // доступ тип_вывода название (переменные)
         {
             // чтение, запись файла
             string[] configFile;
@@ -21,7 +21,7 @@ namespace ImTest
             }
             return config;
         }
-        static void changeConsole(Dictionary<string, string> config) // void - без вывода
+        static void ChangeConsole(Dictionary<string, string> config) // void - без вывода
         {
             // чтение конфига
             ConsoleColor ForegroundColor = (ConsoleColor)Enum.Parse(typeof(ConsoleColor), config["ForegroundColor"]);
@@ -36,7 +36,7 @@ namespace ImTest
             Console.ForegroundColor = ForegroundColor;
             Console.Clear();
         }
-        static string findUnit(string pathOfDirectory)
+        static string FindUnit(string pathOfDirectory)
         {
             // запрос нужного раздела
             DirectoryInfo dir = new DirectoryInfo(pathOfDirectory);
@@ -65,13 +65,13 @@ namespace ImTest
                     catch (Exception)
                     {
                         Console.WriteLine("Нет такого файла");
-                        return findUnit(pathOfDirectory);
+                        return FindUnit(pathOfDirectory);
                     }
                 }
                 catch (Exception)
                 {
                     Console.WriteLine("Вы ввели неверное значение");
-                    return findUnit(pathOfDirectory);
+                    return FindUnit(pathOfDirectory);
                 }
             } catch (Exception) {
                 Console.WriteLine("[EROR] отредактируте файл config.txt, укажите нужный путь к разделу с лескикой.");
@@ -81,7 +81,7 @@ namespace ImTest
             }
             
         }
-        public void reInit()
+        public void ReInit()
         {
             //инициализация повторного запуска
 
@@ -99,15 +99,15 @@ namespace ImTest
         {
             // объявление перменных
             Dictionary<string, string> config = new Dictionary<string, string>(); // - файл с настройками
-            test test = new test(); // - ссылка на объект test
+            Test test = new Test(); // - ссылка на объект test
             string pathOfUnit; // путь к лексике
 
             //запуск методов
-            config = openConfig(config); // чтение config.txt
-            changeConsole(config); // изменение консосли по конфигу
-            pathOfUnit = findUnit(config["pathOfDirectory"]); // присваивание пути к лексике
+            config = OpenConfig(config); // чтение config.txt
+            ChangeConsole(config); // изменение консосли по конфигу
+            pathOfUnit = FindUnit(config["pathOfDirectory"]); // присваивание пути к лексике
             Console.WriteLine(pathOfUnit); 
-            test.init($"{config["pathOfDirectory"]}/{pathOfUnit}"); // запуск теста
+            test.Init($"{config["pathOfDirectory"]}/{pathOfUnit}"); // запуск теста
         }
     }
 }

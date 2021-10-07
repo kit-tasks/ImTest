@@ -4,10 +4,10 @@ using System.Linq;
 
 namespace ImTest
 {
-    class test
+    class Test
     {
-        startTest startTest = new startTest();
-        public void init(string path)
+        StartTest startTest;
+        public void Init(string path)
         {
             // инициализация
             string[] file = System.IO.File.ReadAllLines(path);
@@ -27,13 +27,13 @@ namespace ImTest
                 Console.WriteLine("[EROR] выбранный файл не содержит лекскиу, или не правильного формата");
                 Console.WriteLine("Файл с лекский ввида [русское слово]_[английское слово]");
                 Console.WriteLine("Пример: читать_read");
-                startTest.reInit();
+                startTest.ReInit();
             }
 
             // запуск теста
-            exam(words_rus_eng);
+            Exam(words_rus_eng);
         }
-        public void exam(Dictionary<string, string> words)
+        public void Exam(Dictionary<string, string> words)
         {
             Console.WriteLine($"{words.Count} - слов в лексике");
             Console.WriteLine("Сколько слов хотите в тесте?");
@@ -80,7 +80,7 @@ namespace ImTest
                     break;
                 }
             }
-
+            startTest = new StartTest();
             // конец
             Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.Black;
@@ -94,7 +94,7 @@ namespace ImTest
                 }
                 Console.WriteLine(line);
             }
-            startTest.reInit();
+            startTest.ReInit();
         }
     }
 }

@@ -35,6 +35,25 @@ namespace ImTest
         }
         public void exam(Dictionary<string, string> words)
         {
+            Console.WriteLine($"{words.Count} - слов в лексике");
+            Console.WriteLine("Сколько слов хотите в тесте?");
+            bool notGood;
+            int n = 1;
+            do
+            {
+                try
+                {
+                    n = int.Parse(Console.ReadLine());
+                    notGood = false;
+                }
+                catch
+                {
+                    Console.WriteLine("Вы ввели не число");
+                    notGood = true;
+                }
+            } while (notGood);
+                
+                
             // начало
             Console.WriteLine("Начнём тест");
             Console.WriteLine("Начните вводить перевод русских слов на английском");
@@ -44,8 +63,10 @@ namespace ImTest
             // ввод значений
             Dictionary<string, string> result = new Dictionary<string, string>();
             Console.WriteLine();
+            int counter = 0;
             foreach (var word in words)
             {
+                counter += 1;
                 Console.Write($"{word.Key} : ");
                 string answer = Console.ReadLine(); // проверка на правильность ответа
                 if (answer == word.Value) // запись для сводки
@@ -54,6 +75,10 @@ namespace ImTest
                 } else {
                     result.Add($"{word.Key} - {answer} {word.Value}", "uncorrect");
                 }   
+                if (counter == n)
+                {
+                    break;
+                }
             }
 
             // конец

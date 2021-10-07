@@ -1,0 +1,49 @@
+центральный процессор_central processing unit
+делать резервное копирование данных_to back up data
+принимать данные_to accept data
+обрабатывать (данные)_to processing (data)
+обработка_processing
+запусть программу_to run a programm
+набор инструкций_set of insturcions
+периферийные устройства_peripherals
+выполнять_to execute
+набор микросхем оперативной памяти_collection of RAM chips
+устройства ввода_input devices
+устройства вывода_output devices
+запоминающее устройство_storage devices
+подключенный к_attached to
+обеспечивать постоянное хранение данных_to provide a permanent storage
+как... так и_both... and
+позволять, допускать_to enable
+распространненый_common
+извлекать готовый продукт из системы_to extrat the finished product from the system
+на задней панели_on the rear pannel
+считыватель карт_card reader
+расходы_expenses
+доход_income
+процент_interesr
+ноутбук_laptop
+планшет_tablet PC
+оперативная память_random access memory
+клавиатура_keyboard
+печатать результаты на бумаге с помощью принтера_to print the results on to paper by means of printer
+подключить широкий спектр_to plug a wide range of
+связть между_coomunication between
+настольный компьютер_desktop PC
+порт_USB port
+разъем_USB connector
+заработная плата_paytoll
+реклама_publicity
+продажа_sale
+акция_stock
+персональный шифровальный помощник_personal digital assistant
+мейнфрейм (персональный ЭВМ)_mainframe
+определенный формат_specified format
+подавать_to feed
+память (основаная)_memory (main)
+аппаратное обеспечение_hardware
+программное обеспечение_software
+флеш-накопитель_flash drive
+читать данные_read data
+записывать данные_write data
+вводить_to go into

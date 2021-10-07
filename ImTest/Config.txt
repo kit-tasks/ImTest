@@ -1,4 +1,4 @@
-﻿pathOfDirectory C:\Users\Максим\source\repos\ImTest\ImTest\data\
+﻿pathOfDirectory C:\Users\MaxEKB\Documents\Projects\ImTest2.-\ImTest\data\
 BackgroundColor Yellow
 ForegroundColor Blue
 CursorVisible true

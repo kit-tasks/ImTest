@@ -6,12 +6,11 @@ namespace ImTest
 {
     class Test
     {
-        StartTest startTest;
-        public void Init(string path)
+        StartTest startTest = new StartTest();
+        private Dictionary<string, string> Init(string path, Dictionary<string, string>words_rus_eng)
         {
             // инициализация
             string[] file = System.IO.File.ReadAllLines(path);
-            Dictionary<string, string> words_rus_eng = new Dictionary<string, string>();
             
             // получение рандомных значений
             var rand = new Random();
@@ -23,17 +22,15 @@ namespace ImTest
                 string[] forDict = file[id].Split("_");
                 words_rus_eng.Add(forDict[0], forDict[1]);
                 }
+                // запуск теста
             } catch (Exception) {
                 Console.WriteLine("[EROR] выбранный файл не содержит лекскиу, или не правильного формата");
                 Console.WriteLine("Файл с лекский ввида [русское слово]_[английское слово]");
                 Console.WriteLine("Пример: читать_read");
-                startTest.ReInit();
             }
-
-            // запуск теста
-            Exam(words_rus_eng);
+            return words_rus_eng;
         }
-        public void Exam(Dictionary<string, string> words)
+        private void Exam(Dictionary<string, string> words)
         {
             Console.WriteLine($"{words.Count} - слов в лексике");
             Console.WriteLine("Сколько слов хотите в тесте?");
@@ -94,7 +91,21 @@ namespace ImTest
                 }
                 Console.WriteLine(line);
             }
+        }
+        private void End()
+        {
             startTest.ReInit();
+        }
+
+        public void MainTest(string Path)
+        {
+            Dictionary <string, string> words = new Dictionary<string, string>();
+            Dictionary<string, string> init = Init(Path, words);
+            if (init.Count != 0)
+            {
+                Exam(init);
+            }
+            End();
         }
     }
 }

@@ -107,7 +107,7 @@ namespace ImTest
             ChangeConsole(config); // изменение консосли по конфигу
             pathOfUnit = FindUnit(config["pathOfDirectory"]); // присваивание пути к лексике
             Console.WriteLine(pathOfUnit); 
-            test.Init($"{config["pathOfDirectory"]}/{pathOfUnit}"); // запуск теста
+            test.MainTest($"{config["pathOfDirectory"]}/{pathOfUnit}"); // запуск теста
         }
     }
 }
